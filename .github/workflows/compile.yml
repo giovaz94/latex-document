@@ -1,0 +1,29 @@
+name: Compile LaTeX Document
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up LaTeX
+      uses: xu-cheng/texlive-action@v2
+      with:
+        texlive-version: 2023
+    
+    - name: Compile LaTeX document using Makefile
+      run: |
+        make
+    
+    - name: Upload PDF
+      uses: actions/upload-artifact@v3
+      with:
+        name: document-pdf
+        path: build/main.pdf
+        retention-days: 7
