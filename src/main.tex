@@ -1,0 +1,54 @@
+\documentclass[12pt, a4paper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{biblatex}
+
+% Document Metadata
+\title{Comprehensive LaTeX Document Example}
+\author{Your Name}
+\date{\today}
+
+% Bibliography
+\addbibresource{bibliography/references.bib}
+
+% Document Geometry
+\geometry{
+    a4paper,
+    total={170mm,257mm},
+    left=20mm,
+    top=20mm,
+}
+
+\begin{document}
+
+% Title Page
+\maketitle
+
+% Abstract
+\input{chapters/00-abstract.tex}
+
+\tableofcontents
+\newpage
+
+% Chapter Inputs
+\input{chapters/01-introduction.tex}
+\input{chapters/02-methodology.tex}
+\input{chapters/03-results.tex}
+\input{chapters/04-discussion.tex}
+\input{chapters/05-conclusion.tex}
+
+% Acknowledgments
+\section*{Acknowledgments}
+Thank you to all contributors and supporters of this research.
+
+% Bibliography
+\printbibliography
+
+\end{document}
