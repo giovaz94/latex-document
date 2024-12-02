@@ -44,24 +44,13 @@ sudo apt-get install texlive-full latexmk
 
 ## Compilation
 
-### Local Compilation
-- Compile the document:
-  ```bash
-  make
-  ```
-- Watch and auto-compile during editing:
-  ```bash
-  make watch
-  ```
-- Clean build artifacts:
-  ```bash
-  make clean
-  ```
 
 ### Continuous Integration
 This project uses GitHub Actions for automatic compilation:
 - PDF is generated on every push to `main`
 - Compilation errors are reported in the Actions tab
+
+Note that for this to work, you need to add as secret to your repository the `GITHUB_TOKEN` with the `repo` scope.
 
 ## Writing Guidelines
 
