@@ -12,12 +12,17 @@ jobs:
 
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v3
+
+    - name: Clean Auxiliary Files
+      run: |
+        cd src
+        rm -f *.aux *.bcf *.fls *.log *.bbl *.blg *.out
 
     - name: Compile LaTeX Document
       uses: xu-cheng/latex-action@v2
       with:
-        root_file: src/main.tex 
+        root_file: src/main.tex
         args: -pdf
 
     - name: Upload Compiled PDF
