@@ -29,7 +29,7 @@ jobs:
         working_directory: src
 
     - name: Upload Compiled PDF
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: compiled-pdf
         path: src/main.pdf
