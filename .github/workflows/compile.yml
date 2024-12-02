@@ -20,10 +20,11 @@ jobs:
         rm -f *.aux *.bcf *.fls *.log *.bbl *.blg *.out
 
     - name: Compile LaTeX Document
-      uses: xu-cheng/latex-action@v2
+      uses: xu-cheng/latex-action@v3
       with:
-        root_file: src/main.tex
+        root_file: main.tex
         args: -pdf
+        working_directory: src
 
     - name: Upload Compiled PDF
       uses: actions/upload-artifact@v3
