@@ -11,8 +11,6 @@ This repository contains a comprehensive LaTeX document project with robust auto
 │   ├── chapters/          # Individual chapter files
 │   ├── figures/           # Project graphics and images
 │   └── bibliography/      # BibTeX references
-├── build/                 # Compiled document output
-├── Makefile               # Local compilation and automation
 └── README.md              # Project documentation
 ```
 
@@ -65,6 +63,11 @@ Note that for this to work, you need to add as secret to your repository the `GI
 ### Adding Figures
 - Place figures in `src/figures/`
 - Use relative paths when including in LaTeX
+
+### Adding listings
+- Place listings in `src/listing/`
+- Use the relative import command for import a code snippet (currently support Yaml, Dockerfile and Python).
+
 
 ## Contribute to the project
 All contributions are welcome! Here's how you can help:
