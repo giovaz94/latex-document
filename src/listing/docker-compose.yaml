@@ -20,7 +20,7 @@ services:
       - static_volume:/app/static
 
   db:
-    image: postgres:13-alpine
+    image: postgres:17-alpine
     container_name: postgres-database
     environment:
       - POSTGRES_DB=appdb
