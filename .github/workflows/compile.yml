@@ -22,7 +22,7 @@ jobs:
         rm -f *.aux *.bcf *.fls *.log *.bbl *.blg *.out
 
     - name: Compile LaTeX Document
-      uses: xu-cheng/latex-action@v3
+      uses: xu-cheng/latex-action@v4
       with:
         root_file: main.tex
         args: -pdf
